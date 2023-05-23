@@ -1,3 +1,7 @@
+/**
+ * Base Styles
+ */
+
 * {
     color: #fff;
     box-sizing: border-box;
@@ -32,6 +36,10 @@ button {
         transform: scale(1.1);
     }
 }
+
+/**
+ * Page content
+ */
 
 .container {
     display: flex;
@@ -86,6 +94,10 @@ button {
 .hidden {
     display: none !important;
 }
+
+/**
+ * Media Queries
+ */
 
 @media only screen and (max-width: 1000px) {
     .container {

@@ -1,3 +1,4 @@
+// References to elements in page used in JS
 const selectionButtons = document.querySelectorAll('#selection-container div > button');
 const startBtn = document.querySelector('#start-btn');
 const playAgainBtn = document.querySelector('#play-again-btn');
@@ -10,12 +11,19 @@ const resultContainer = document.querySelector('#result-container');
 const introContainer = document.querySelector('#intro-container');
 const gameContainer = document.querySelector('#game-container');
 
+
+//
+//  Adding Event Listeners
+//
+
 startBtn.addEventListener('click', (e) => {
+    // Hide intro elements and show game elements.
     gameContainer.classList.remove('hidden');
     introContainer.classList.add('hidden');
 });
 
 playAgainBtn.addEventListener('click', (e) => {
+    // Re-enable selection buttons and reset containers and score.
     selectionButtons.forEach((button) => {
         button.disabled = false;
     });
@@ -28,6 +36,7 @@ playAgainBtn.addEventListener('click', (e) => {
 });
 
 selectionButtons.forEach((button) => {
+    // If the button is clicked or the image in the button.
     button.addEventListener('click', (e) => {
         if (e.target.id == 'select-rock' || e.target.parentNode.id == 'select-rock') {
             playRound(0, getComputerChoice());
@@ -70,6 +79,7 @@ function displayComputerSelection(computerSelection) {
 }
 
 function changeScore(winner) {
+    // Add 1 to winner's score by converting to int, incrementing and back to string.
     if (winner == 0) {
         playerScore.textContent = String((parseInt(playerScore.textContent)) + 1);
     } 
@@ -77,6 +87,7 @@ function changeScore(winner) {
         computerScore.textContent = String((parseInt(computerScore.textContent)) + 1);
     }
 
+    // If there is a winner, display winner text and show play again button. Disable selection buttons as game is over.
     if (playerScore.textContent == "5" || computerScore.textContent == "5") {
         if (playerScore.textContent == "5") {
             winText = document.createElement('p');
@@ -112,6 +123,7 @@ function displayResult(result) {
 }
 
 function getComputerChoice() {
+    // Return random number between 0 and 2.
     return Math.floor(Math.random() * 3);
 }
 
@@ -121,6 +133,7 @@ function playRound(playerSelection, computerSelection) {
 
     displayPlayerSelection(playerSelection);
     displayComputerSelection(computerSelection);
+    // Display correct result depending on the selected choices of the player and computer.
     if (playerSelection == 0)
     {
         if (computerSelection == 0) {

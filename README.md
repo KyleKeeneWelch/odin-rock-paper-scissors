@@ -1,1 +1,16 @@
 # odin-rock-paper-scissors
+This project is a project undertaken as part of `The Odin Project` learning web course teaching `HTML`, `CSS` and `JavaScript` skills. It involved putting into practice the teachings of `JavaScript` taught in the previous lessons and built upon the previous console application version by implementing a fleshed out user interface and updated logic.
+
+The use of JavaScript is highly introduced within this project to demonstrate my skills in DOM methods and the manipulation of `HTML` and `CSS` from `JavaScript`. By understanding the rules of the typical rock, paper, scissors game, I am able to control conditional logic to assess whether the player's selected choice produces a winning, losing or drawn outcome when compared to a randomly selected choice by the computer. Much of the user interface elements are dynamically shown such as updating the score elements when the player or computer accumulates a point or is shown/hidden from the removal or addition of the class from an element's classlist. 
+
+Hiding elements is manipulated as the added and removed class has styling properties set so an element's display attribute is none. This means we can only show elements on the interface to the user when they are required therefore reducing clutter and increasing user experience. This is used in a "game-like" fashion where the game introduction or menu is shown before the game content is displayed and a button to restart the game is shown upon finish. 
+
+## Features
+
+- **Responsive User Interface** - The project provides a responsive user interface that enables the same experience across both mobile and desktop devices. Elements that are spread across the screen are catered for in the mobile version of the site which drops these to maintain their own spaces. Much of the elements found within the site use flexbox and justify content to center themselves and negotiate their spacing between elements on the same row.
+
+- **Replayable with different outcomes** - The game itself contains a winning, losing and draw state. The player can produce a winning outcome by reaching 5 points. The same applies to the computer where the player would therefore lose. Getting a draw means that nobody receives a point and therefore the outcome involves the continuation of another round until a win or loss is met.
+
+- **Simple and Traditional** - Users can find that the selection between a choice of rock, paper, scissors to be easy from the large buttons representing each choice. The goal of the game is clearly stated in the beginning and the selection of the player and the computer is shown as well as the outcome of a round and eventually the game. The display of such information makes the game simple to play and understand and much of the rules and scoring system are traditional of the rock, paper, scissors game.
+
+- **Image Buttons** - To assist in the selection of a choice, each button contains an image within which when clicked, will provide the same selected choice as the player's hand in the game. This makes it easier to see which option is which and makes for a more refined and aesthetic look.
